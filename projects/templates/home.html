@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<div class="row">
+    <div class="col-md-3">
+        <div class="card card-body border-0 shadow p-3 mb-5 bg-white rounded" id="profile-wrapper">
+            <img style="border-radius:50%" class="img-fluid" src="{% static 'img/veitnelve.jpg' %}">
+            <h4> Hello everyone! My name is Val</h4>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="card card-body border-0 shadow p-3 mb-5 bg-white rounded" id="description">
+            <h4> I am learning backend development on python </h4>
+            <h4> My stack right now: </h4>
+            <div class="row">
+                <div class="col">
+                    <div class="card border-0">
+                        <img class="card-img-top" src="{% static 'img/python.png' %}">
+                        <div class="card-body">
+                            <p>Python</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img class="card-img-top" src="{% static 'img/django.png' %}">
+                        <div class="card-body">
+                            <p>Django</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img class="card-img-top" src="{% static 'img/html-5.png' %}">
+                        <div class="card-body">
+                            <p>HTML5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card border-0">
+                        <img class="card-img-top" src="{% static 'img/css-3.png' %}">
+                        <div class="card-body">
+                            <p>CSS3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    {% for project in projects %}
+    {% if project.pk <= 3 %}
+    <div class="col-md-4">
+        <div class="card mb-2 border-0 shadow p-3 mb-5 bg-white rounded">
+            <img style="border-radius: 20%" class="card-img-top" src="{% static project.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ project.title }}</h5>
+                <p class="card-text">{{ project.description }}</p>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    </div>
+</div>
+<div class="d-grid gap-2 shadow p-3 mb-5 bg-white rounded">
+    <a class="btn btn-outline-primary border-0" type="button" href="http://127.0.0.1:8000/projects/">See all my projects</a>
+</div>
+
+{% endblock %}
