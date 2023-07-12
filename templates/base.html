@@ -7,6 +7,7 @@
       <title>{% block title %}My Portfolio{% endblock title %}</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
       <link rel="stylesheet" href="D:/Projects/portfolio/static/css/main.css">
+      <script src="https://kit.fontawesome.com/21c8dc4323.js" crossorigin="anonymous"></script>
    </head>
    <body>
       <h1>{% block header %}{% endblock header %}</h1>
@@ -23,18 +24,18 @@
                      <a class="nav-link" href="http://127.0.0.1:8000/projects/">Projects</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="http://127.0.0.1:8000/blog/">My Blog</a>
+                     <a class="nav-link" href="http://127.0.0.1:8000/blog/">Blog</a>
                   </li>
                </ul>
                <div class="d-flex justify-content-end">
                   <a href="https://vk.com/s1mpl3/">
-                     <img src="{% static 'img/vk.svg' %}" class="img-fluid img-thumbnail border-0" style="height: 50px; ">
+                     <i class="fa-brands fa-vk fa-2xl" style="color: #000000;"></i>
                   </a>
-                  <a href="https://vk.com/s1mpl3/">
-                     <img src="{% static 'img/github.svg' %}" class="img-fluid img-thumbnail border-0" style="height: 50px; ">
+                  <a href="https://github.com/veitnelve">
+                     <i class="fa-brands fa-github fa-2xl" style="color: #000000;"></i>
                   </a>
                   <a href="mailto:veitnelve528@gmail.com">
-                     <img src="{% static 'img/mail.svg' %}" class="img-fluid img-thumbnail border-0" style="height: 50px; ">
+                     <i class="fa-solid fa-envelope fa-2xl" style="color: #000000;"></i>
                   </a>
                </div>
             </div>
